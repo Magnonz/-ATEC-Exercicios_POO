@@ -1,5 +1,5 @@
 package Exercicios1;
-<<<<<<< HEAD
+
 import Exercicios2.*;
 import Exercicios3.*;
 
@@ -26,20 +26,12 @@ public class Principal {
 		case 0 : System.out.println("Adeus!!");break;
 		default: System.out.println("Valor invalido");break;
 		
-		
-		
-		
-		
-		
 		}
-=======
-
-public class Principal {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
->>>>>>> branch 'master' of https://github.com/Magnonz/POO
-
+		
+		
+		
+		
+		
 	}
 
 }
