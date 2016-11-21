@@ -44,7 +44,7 @@ public class CriarArtigo {
 			soma+=Artigos.get(i).getPreco();
 		}
 		
-		System.out.println("O valor total é : "+ (soma/3));
+		System.out.println("O valor total é : "+ soma);
 		
 		
 		
