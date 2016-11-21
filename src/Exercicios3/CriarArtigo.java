@@ -1,6 +1,7 @@
 package Exercicios3;
 
 import java.util.Scanner;
+import java.util.Vector;
 
 public class CriarArtigo {
 
@@ -8,15 +9,14 @@ public class CriarArtigo {
 	Artigo artigo2=new Artigo(0,""); 
 	Artigo artigo3=new Artigo(0,"");
 	
+	Vector<Artigo> Artigos= new Vector<Artigo>();	
 	
 	public CriarArtigo() {
 		Scanner reader = new Scanner(System.in);
 
 		String nome;
 		double preco;
-		
-		
-		
+				
 		for(int i=0;i<3;i++){
 			
 			System.out.print("Introduza o nome do "+(i+1)+"º artigo:");
@@ -25,25 +25,27 @@ public class CriarArtigo {
 			preco=reader.nextDouble();
 			if(i==0)
 			alterarArtigo(artigo1,preco,nome);
+			
 			else if(i==1)
 			alterarArtigo(artigo2,preco,nome);
 			else if(i==2)
 			alterarArtigo(artigo3,preco,nome);
 			
-		}
+		}	
 		
-		
-		calcularGastos(artigo1,artigo2,artigo3);
-		
-		
-		
+		calcularGastos();		
 		
 	}
 	
-	public void calcularGastos(Artigo art1,Artigo art2,Artigo art3){
+	public void calcularGastos(){
 		double soma=0;
-		soma=art1.getPreco()+art2.getPreco()+art3.getPreco();
-		System.out.println("O valor total é : "+ soma );
+		
+		for (int i = 0; i < 3; i++) {
+			soma+=Artigos.get(i).getPreco();
+		}
+		
+		System.out.println("O valor total é : "+ (soma/3));
+		
 		
 		
 	}
@@ -52,6 +54,9 @@ public class CriarArtigo {
 		
 		art.setNewAttr(nome);
 		art.setPreco(preco);
+		Artigos.add(art);
+		
+		
 		
 		
 	}
