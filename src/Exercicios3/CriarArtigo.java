@@ -25,7 +25,6 @@ public class CriarArtigo {
 			preco=reader.nextDouble();
 			if(i==0)
 			alterarArtigo(artigo1,preco,nome);
-			
 			else if(i==1)
 			alterarArtigo(artigo2,preco,nome);
 			else if(i==2)
